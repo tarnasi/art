@@ -1,32 +1,33 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <!-- drwaer -->
+    <navigation-drawer />
+
+    <!-- Header -->
+    <Header />
+
+    <!-- Main Content -->
+    <v-container>
+      <v-main>
+        <transition name="scale-transition">
+          <router-view/>
+        </transition>
+      </v-main>
+    </v-container>
+  </v-app>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Header from './components/Layouts/Header.vue'
+import NavigationDrawer from './components/Layouts/NavigationDrawer.vue'
 
-#nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+export default {
+  name: 'App',
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-</style>
+  components: {
+    Header,
+    NavigationDrawer
+  },
+};
+</script>
