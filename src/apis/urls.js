@@ -31,7 +31,7 @@ instance.interceptors.response.use(function (response) {
 /** ============================  App apis handled here  ======================== */
 const apis = {
     fetchAllPosts: (callback) => {
-        instance.get('/blogs').then(callback)
+        instance.get('/posts').then(callback)
     },
 }
 

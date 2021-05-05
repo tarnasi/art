@@ -1,19 +1,19 @@
 <template>
   <div v-if="posts != null">
-    <main-page :postsLength="postsLength" :posts="posts" />
+    <Dashboard :postsLength="postsLength" :posts="posts" />
   </div>
 </template>
 
 <script>
-  import MainPage from '../components/MainPage'
+  import Dashboard from '../../components/Dashboard'
 
-  import apis from '../apis/urls'
+  import apis from '../../apis/urls'
 
   export default {
-    name: 'Home',
+    name: 'DashboardMainPage',
 
     components: {
-      MainPage,
+      Dashboard,
     },
 
     data: () => {
