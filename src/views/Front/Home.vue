@@ -1,5 +1,5 @@
 <template>
-  <h1>Main Page</h1>
+  <h1>content</h1>
 </template>
 
 <script>
@@ -12,11 +12,7 @@
       
     },
 
-    data: () => {
-      return {
-        
-      }
-    },
+    
 
     mounted () {
       

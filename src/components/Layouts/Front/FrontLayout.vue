@@ -1,5 +1,8 @@
 <template>
   <v-app>
+    <!-- Header -->
+    <front-header :showSlider="true" />
+
     <!-- Main Content -->
     <v-container>
       <v-main>
@@ -12,7 +15,13 @@
 </template>
 
 <script>
+import FrontHeader from './Partial/Header.vue'
+
 export default {
   name: "FrontLayout",
+
+  components: {
+    FrontHeader,
+  }
 };
 </script>
