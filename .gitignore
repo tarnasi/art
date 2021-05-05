@@ -1,0 +1,16 @@
+# Idea and editors
+.vscode
+.idea
+
+# virtualenv
+.venv
+solid.sqlite
+
+# package manager
+Pipfile.lock
+
+# paths
+*/__pycache__/*
+
+# __data
+__data
